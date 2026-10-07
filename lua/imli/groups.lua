@@ -24,6 +24,9 @@ M.setup = function()
     fg = require("imli.palette").fade(p.fg, p.bg_alt, 0.5),
     bg = require("imli.palette").fade(p.bg_alt, p.bg, 0.5),
   })
+  hl("TabLine",     { fg = p.fg_dim, bg = p.bg_alt })
+  hl("TabLineSel",  { fg = p.fg_dim, bg = "#132631", bold = true })
+  hl("TabLineFill", { bg = p.bg })
   hl("VertSplit",    { fg = p.border })
   hl("WinSeparator", { fg = p.border })
   hl("Pmenu",        { fg = p.fg, bg = p.bg_alt })

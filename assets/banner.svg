@@ -1,0 +1,144 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="400" viewBox="0 0 1280 400" font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+  <defs>
+    <linearGradient id="titleGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d99a5b"/>
+      <stop offset="55%" stop-color="#d8b96a"/>
+      <stop offset="100%" stop-color="#a3b86b"/>
+    </linearGradient>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1418"/>
+      <stop offset="100%" stop-color="#101a20"/>
+    </linearGradient>
+    <linearGradient id="winGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#132631"/>
+      <stop offset="100%" stop-color="#0b1418"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="400" fill="url(#bgGrad)"/>
+
+  <!-- Subtle glow accents -->
+  <circle cx="1150" cy="60" r="180" fill="#d99a5b" opacity="0.05"/>
+  <circle cx="120" cy="360" r="160" fill="#5b9dff" opacity="0.04"/>
+
+  <!-- Title block -->
+  <text x="70" y="118" font-size="72" font-weight="800" letter-spacing="-2" fill="url(#titleGrad)">imli</text>
+  <text x="74" y="158" font-size="21" fill="#e8e0d4" opacity="0.9">A warm ember &amp; coffee colorscheme for Neovim</text>
+  <text x="74" y="188" font-size="15" fill="#5c6b7a">dark &amp; light &#183; treesitter &amp; LSP &#183; warm on the eyes</text>
+
+  <!-- Editor mockup -->
+  <g>
+    <rect x="70" y="220" width="560" height="140" rx="10" fill="url(#winGrad)" stroke="#606676" stroke-width="1"/>
+    <!-- tabline -->
+    <rect x="70" y="220" width="560" height="30" rx="10" fill="#101a20"/>
+    <rect x="70" y="238" width="560" height="12" fill="#101a20"/>
+    <rect x="82" y="227" width="110" height="16" rx="4" fill="#132631"/>
+    <text x="92" y="239" font-size="10" fill="#5c6b7a" font-family="monospace">init.lua</text>
+    <rect x="198" y="227" width="110" height="16" rx="4" fill="#101a20"/>
+    <text x="208" y="239" font-size="10" fill="#5c6b7a" font-family="monospace" opacity="0.6">palette.lua</text>
+    <rect x="314" y="227" width="110" height="16" rx="4" fill="#101a20"/>
+    <text x="324" y="239" font-size="10" fill="#5c6b7a" font-family="monospace" opacity="0.6">groups.lua</text>
+    <!-- statusline -->
+    <rect x="70" y="330" width="560" height="30" rx="10" fill="#101a20"/>
+    <rect x="70" y="330" width="560" height="14" fill="#101a20"/>
+    <text x="82" y="349" font-size="10" fill="#5c6b7a" font-family="monospace">main</text>
+    <text x="540" y="349" font-size="10" fill="#5c6b7a" font-family="monospace">lua 1:1</text>
+    <!-- code lines -->
+    <text x="90" y="272" font-size="12" font-family="monospace" fill="#b48ead">local</text>
+    <text x="140" y="272" font-size="12" font-family="monospace" fill="#e8e0d4">imli</text>
+    <text x="180" y="272" font-size="12" font-family="monospace" fill="#6fb3a8">=</text>
+    <text x="200" y="272" font-size="12" font-family="monospace" fill="#e8e0d4">require</text>
+    <text x="262" y="272" font-size="12" font-family="monospace" fill="#a3b86b">"imli"</text>
+
+    <text x="90" y="294" font-size="12" font-family="monospace" fill="#b48ead">imli.setup</text>
+    <text x="172" y="294" font-size="12" font-family="monospace" fill="#e8e0d4">({</text>
+    <text x="190" y="294" font-size="12" font-family="monospace" fill="#d8b96a">italic_comments</text>
+    <text x="316" y="294" font-size="12" font-family="monospace" fill="#6fb3a8">=</text>
+    <text x="334" y="294" font-size="12" font-family="monospace" fill="#d99a5b">true</text>
+    <text x="382" y="294" font-size="12" font-family="monospace" fill="#e8e0d4">})</text>
+
+    <text x="90" y="316" font-size="12" font-family="monospace" fill="#64737f">-- warm tones, easy on late nights</text>
+  </g>
+
+  <!-- Palette swatches -->
+  <g font-family="monospace" font-size="11">
+    <!-- row label -->
+    <text x="700" y="232" font-size="12" fill="#5c6b7a" font-family="'Segoe UI', Arial, sans-serif" letter-spacing="2">DARK PALETTE</text>
+
+    <!-- swatch 1: bg -->
+    <rect x="700" y="246" width="86" height="46" rx="6" fill="#0b1418" stroke="#606676" stroke-width="1"/>
+    <text x="708" y="274" fill="#5c6b7a">bg</text>
+    <text x="708" y="287" fill="#5c6b7a" opacity="0.75">#0b1418</text>
+
+    <!-- swatch 2: bg_alt -->
+    <rect x="794" y="246" width="86" height="46" rx="6" fill="#101a20" stroke="#606676" stroke-width="1"/>
+    <text x="802" y="274" fill="#5c6b7a">bg_alt</text>
+    <text x="802" y="287" fill="#5c6b7a" opacity="0.75">#101a20</text>
+
+    <!-- swatch 3: fg -->
+    <rect x="888" y="246" width="86" height="46" rx="6" fill="#e8e0d4" stroke="#606676" stroke-width="1"/>
+    <text x="896" y="274" fill="#0b1418">fg</text>
+    <text x="896" y="287" fill="#0b1418" opacity="0.75">#e8e0d4</text>
+
+    <!-- swatch 4: fg_dim -->
+    <rect x="982" y="246" width="86" height="46" rx="6" fill="#5c6b7a" stroke="#606676" stroke-width="1"/>
+    <text x="990" y="274" fill="#0b1418">fg_dim</text>
+    <text x="990" y="287" fill="#0b1418" opacity="0.75">#5c6b7a</text>
+
+    <!-- swatch 5: red -->
+    <rect x="1076" y="246" width="86" height="46" rx="6" fill="#e06c60" stroke="#606676" stroke-width="1"/>
+    <text x="1084" y="274" fill="#0b1418">red</text>
+    <text x="1084" y="287" fill="#0b1418" opacity="0.75">#e06c60</text>
+
+    <!-- swatch 6: orange -->
+    <rect x="700" y="300" width="86" height="46" rx="6" fill="#d99a5b" stroke="#606676" stroke-width="1"/>
+    <text x="708" y="328" fill="#0b1418">orange</text>
+    <text x="708" y="341" fill="#0b1418" opacity="0.75">#d99a5b</text>
+
+    <!-- swatch 7: yellow -->
+    <rect x="794" y="300" width="86" height="46" rx="6" fill="#d8b96a" stroke="#606676" stroke-width="1"/>
+    <text x="802" y="328" fill="#0b1418">yellow</text>
+    <text x="802" y="341" fill="#0b1418" opacity="0.75">#d8b96a</text>
+
+    <!-- swatch 8: green -->
+    <rect x="888" y="300" width="86" height="46" rx="6" fill="#a3b86b" stroke="#606676" stroke-width="1"/>
+    <text x="896" y="328" fill="#0b1418">green</text>
+    <text x="896" y="341" fill="#0b1418" opacity="0.75">#a3b86b</text>
+
+    <!-- swatch 9: cyan -->
+    <rect x="982" y="300" width="86" height="46" rx="6" fill="#6fb3a8" stroke="#606676" stroke-width="1"/>
+    <text x="990" y="328" fill="#0b1418">cyan</text>
+    <text x="990" y="341" fill="#0b1418" opacity="0.75">#6fb3a8</text>
+
+    <!-- swatch 10: blue -->
+    <rect x="1076" y="300" width="86" height="46" rx="6" fill="#5b9dff" stroke="#606676" stroke-width="1"/>
+    <text x="1084" y="328" fill="#0b1418">blue</text>
+    <text x="1084" y="341" fill="#0b1418" opacity="0.75">#5b9dff</text>
+
+    <!-- swatch 11: purple -->
+    <rect x="700" y="354" width="86" height="46" rx="6" fill="#b48ead" stroke="#606676" stroke-width="1"/>
+    <text x="708" y="382" fill="#0b1418">purple</text>
+    <text x="708" y="395" fill="#0b1418" opacity="0.75">#b48ead</text>
+
+    <!-- swatch 12: magenta -->
+    <rect x="794" y="354" width="86" height="46" rx="6" fill="#c97b8a" stroke="#606676" stroke-width="1"/>
+    <text x="802" y="382" fill="#0b1418">magenta</text>
+    <text x="802" y="395" fill="#0b1418" opacity="0.75">#c97b8a</text>
+
+    <!-- swatch 13: selection -->
+    <rect x="888" y="354" width="86" height="46" rx="6" fill="#2a3a44" stroke="#606676" stroke-width="1"/>
+    <text x="896" y="382" fill="#5c6b7a">select</text>
+    <text x="896" y="395" fill="#5c6b7a" opacity="0.75">#2a3a44</text>
+
+    <!-- swatch 14: border -->
+    <rect x="982" y="354" width="86" height="46" rx="6" fill="#606676" stroke="#606676" stroke-width="1"/>
+    <text x="990" y="382" fill="#0b1418">border</text>
+    <text x="990" y="395" fill="#0b1418" opacity="0.75">#606676</text>
+
+    <!-- swatch 15: comment -->
+    <rect x="1076" y="354" width="86" height="46" rx="6" fill="#64737f" stroke="#606676" stroke-width="1"/>
+    <text x="1084" y="382" fill="#0b1418">comment</text>
+    <text x="1084" y="395" fill="#0b1418" opacity="0.75">#64737f</text>
+  </g>
+</svg>
