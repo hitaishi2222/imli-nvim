@@ -30,6 +30,7 @@
 
 - Neovim **0.9+** (uses `nvim_set_hl`)
 - `termguicolors` enabled (set automatically by the colorscheme)
+- The native `vim.pack` install method below additionally requires Neovim **0.12+**
 
 ## Installation
 
