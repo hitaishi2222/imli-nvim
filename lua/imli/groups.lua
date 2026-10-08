@@ -248,6 +248,24 @@ M.setup = function()
   hl("MiniTablineModifiedHidden",  { fg = p.orange, bg = p.bg })
   hl("MiniTablineTabpagesection",  { fg = p.purple, bg = p.bg })
 
+  -- Transparent background: clears the 'bg' of editor background groups so
+  -- the terminal's background shows through.
+  if require("imli").options.transparent_bg then
+    local bg_groups = {
+      "Normal", "NormalFloat", "FloatBorder", "CursorLine", "SignColumn",
+      "StatusLine", "StatusLineNC", "TabLine", "TabLineFill", "WinBar",
+      "WinBarNC", "ColorColumn", "Pmenu", "PmenuSel",
+      "DiagnosticVirtualTextError", "DiagnosticVirtualTextWarn",
+      "DiagnosticVirtualTextInfo", "DiagnosticVirtualTextHint",
+      "MiniTablineFill", "MiniTablineHidden", "MiniTablineVisible",
+    }
+    for _, name in ipairs(bg_groups) do
+      local def = vim.api.nvim_get_hl(0, { name = name, link = false })
+      def.bg = "none"
+      hl(name, def)
+    end
+  end
+
   -- Diagnostics
   hl("DiagnosticError", { fg = p.red })
   hl("DiagnosticWarn",  { fg = p.yellow })

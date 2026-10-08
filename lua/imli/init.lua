@@ -3,6 +3,7 @@ local M = {}
 M.options = {
   italic_comments = true,
   comment_opacity = 1.0, -- 0.1 (barely visible) .. 1.0 (full color)
+  transparent_bg = false, -- true = clear all editor backgrounds (terminal shows through)
   filetypes = nil, -- nil = use defaults from imli.filetypes, or provide your own table
 }
 

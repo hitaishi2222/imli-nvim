@@ -17,12 +17,32 @@
 
 ---
 
+## Screenshots
+
+<p align="center">
+  <img src="screenshots/typesctipt_with_whichkey.png" alt="TypeScript with which-key" width="820"/><br/>
+  <em>TypeScript with which-key</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/lua_with_explorer.png" alt="Lua with file explorer" width="820"/><br/>
+  <em>Lua with file explorer</em>
+</p>
+
+<p align="center">
+  <img src="screenshots/snacks_picker.png" alt="snacks.nvim picker" width="820"/><br/>
+  <em>snacks.nvim picker</em>
+</p>
+
+---
+
 ## Features
 
 - **Two hand-tuned variants** — a warm dark (`#0b1418` base) and a cream-paper light
 - **Treesitter-first** — full coverage for the common captures, plus LSP semantic token overrides
 - **UI consistency** — statusline, tabline (with clear active/inactive separation), popups, diagnostics, which-key, mini.icons
 - **Configurable comments** — adjust comment opacity and italics to taste
+- **Transparent background** — optional `transparent_bg` lets your terminal's background show through
 - **Per-filetype overrides** — winhighlight-based, no glitch
 - **Terminal colors** — sets all 16 terminal slots to match the palette
 
@@ -122,6 +142,9 @@ require("imli").setup({
 
   -- Comment visibility: 0.1 (barely visible) .. 1.0 (full color)
   comment_opacity = 1.0,
+
+  -- Transparent editor background: the terminal's background shows through
+  transparent_bg = false,
 
   -- Per-filetype highlight overrides (winhighlight-based).
   -- nil = use the built-in defaults from imli.filetypes.
