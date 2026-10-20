@@ -239,7 +239,7 @@ vim.cmd("colorscheme imli")
 
 ## Contributing
 
-Issues and pull requests are welcome — a screenshot of the problem helps more than a
+Issues and pull requests are welcome. A screenshot of the problem helps more than a
 description. If you are tuning the palette, `lua/imli/palette.lua` holds both variants
 (dark and light) and `lua/imli/groups.lua` maps them to highlight groups. CI loads the
 colorscheme headlessly on Neovim 0.9, 0.10, stable and nightly, so a regression shows up
@@ -247,4 +247,4 @@ as a red check rather than a broken editor.
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+MIT. See [LICENSE](LICENSE).
