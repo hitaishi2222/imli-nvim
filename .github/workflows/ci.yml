@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  smoke:
+    name: neovim ${{ matrix.version }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        version: ["v0.9.5", "v0.10.4", "stable", "nightly"]
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: rhysd/action-setup-vim@v1
+        with:
+          neovim: true
+          version: ${{ matrix.version }}
+
+      - name: Load colorscheme (dark)
+        run: |
+          nvim --headless -u NONE \
+            -c "set rtp+=$PWD" \
+            -c "colorscheme imli" \
+            -c "lua assert(vim.g.colors_name == 'imli', 'dark variant did not load')" \
+            -c "qa!"
+
+      - name: Load colorscheme (light)
+        run: |
+          nvim --headless -u NONE \
+            -c "set rtp+=$PWD" \
+            -c "set background=light" \
+            -c "colorscheme imli" \
+            -c "lua assert(vim.g.colors_name == 'imli', 'light variant did not load')" \
+            -c "qa!"
+
+      - name: setup() accepts options
+        run: |
+          nvim --headless -u NONE \
+            -c "set rtp+=$PWD" \
+            -c "lua require('imli').setup({ italic_comments = false, transparent_bg = true })" \
+            -c "colorscheme imli" \
+            -c "lua assert(require('imli').options.transparent_bg == true)" \
+            -c "qa!"

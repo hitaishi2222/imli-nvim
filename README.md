@@ -13,6 +13,7 @@
   <img src="https://img.shields.io/badge/lua-2A2D34?style=flat-square&logo=lua&logoColor=51A0CF"/>
   <img src="https://img.shields.io/badge/Neovim-0.9+-004F27?style=flat-square&logo=neovim&logoColor=57A143"/>
   <img src="https://img.shields.io/badge/license-MIT-blue?style=flat-square"/>
+  <img src="https://github.com/hitaishi2222/imli-nvim/actions/workflows/ci.yml/badge.svg" alt="CI"/>
 </p>
 
 ---
@@ -58,7 +59,7 @@
 
 ```lua
 {
-  "your-github-username/imli-nvim",
+  "hitaishi2222/imli-nvim",
   lazy = false,
   priority = 1000,
   config = function()
@@ -77,9 +78,9 @@ No plugin manager needed — Neovim's built-in package manager:
 ```lua
 -- init.lua
 vim.pack.add({
-  "https://github.com/your-github-username/imli-nvim",
+  "https://github.com/hitaishi2222/imli-nvim",
   -- or the table form:
-  -- { src = "https://github.com/your-github-username/imli-nvim", name = "imli" },
+  -- { src = "https://github.com/hitaishi2222/imli-nvim", name = "imli" },
 })
 
 require("imli").setup()
@@ -99,7 +100,7 @@ That's it — the plugin is cloned on first use and tracked in the lockfile
 **Lazy loading** with `vim.pack` — add with `load = false`, then `packadd` on demand:
 
 ```lua
-vim.pack.add({ src = "https://github.com/your-github-username/imli-nvim", load = false })
+vim.pack.add({ src = "https://github.com/hitaishi2222/imli-nvim", load = false })
 
 -- later, when you want it:
 vim.cmd.packadd("imli")
@@ -111,7 +112,7 @@ vim.cmd("colorscheme imli")
 
 ```lua
 use {
-  "your-github-username/imli-nvim",
+  "hitaishi2222/imli-nvim",
   config = function()
     require("imli").setup()
     vim.cmd("colorscheme imli")
@@ -122,7 +123,7 @@ use {
 ### [vim-plug](https://github.com/junegunn/vim-plug)
 
 ```vim
-Plug 'your-github-username/imli-nvim'
+Plug 'hitaishi2222/imli-nvim'
 ```
 
 ```lua
@@ -172,7 +173,7 @@ vim.cmd("colorscheme imli")
 
 ```lua
 {
-  "your-github-username/imli-nvim",
+  "hitaishi2222/imli-nvim",
   lazy = false,
   priority = 1000,
   config = function()
@@ -236,6 +237,14 @@ vim.cmd("colorscheme imli")
 - [mini.icons](https://github.com/echasnovski/mini.icons)
 - [render-markdown](https://github.com/MeanderingProgrammer/render-markdown.nvim)
 
+## Contributing
+
+Issues and pull requests are welcome — a screenshot of the problem helps more than a
+description. If you are tuning the palette, `lua/imli/palette.lua` holds both variants
+(dark and light) and `lua/imli/groups.lua` maps them to highlight groups. CI loads the
+colorscheme headlessly on Neovim 0.9, 0.10, stable and nightly, so a regression shows up
+as a red check rather than a broken editor.
+
 ## License
 
-MIT
+MIT — see [LICENSE](LICENSE).
